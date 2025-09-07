@@ -1,0 +1,604 @@
+/* Navbar.css */
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar container */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding: 12px 24px;
+  z-index: 1000;
+}
+
+/* Main flex container */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo/Brand */
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1f2937;
+}
+
+.navbar-brand a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+.navbar-brand a:hover {
+  color: #22c55e;
+}
+
+/* Hamburger menu button (mobile) */
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: #1f2937;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.hamburger-btn:hover {
+  background-color: #f3f4f6;
+}
+
+.hamburger-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #22c55e;
+}
+
+.hamburger-icon {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  fill: none;
+}
+
+/* Desktop navigation menu */
+.desktop-menu {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 14px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #374151;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.nav-link:hover {
+  color: #22c55e;
+  background-color: #f8fafc;
+}
+
+/* Submit button */
+.submit-btn {
+  background-color: #22c55e;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  margin-left: 8px;
+}
+
+.submit-btn:hover {
+  background-color: #15803d;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3);
+}
+
+.submit-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.4);
+}
+
+/* Auth buttons - styled as buttons wrapping links */
+.auth-button-wrapper {
+  background: none;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  padding: 0;
+  overflow: hidden;
+  margin-left: 4px;
+}
+
+.auth-button-wrapper:hover {
+  border-color: #22c55e;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.1);
+}
+
+.auth-button-wrapper .LoginForm,
+.auth-button-wrapper .SignupForm {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #374151;
+  transition: color 0.2s ease;
+  width: 100%;
+  text-align: center;
+}
+
+.auth-button-wrapper:hover .LoginForm,
+.auth-button-wrapper:hover .SignupForm {
+  color: #22c55e;
+}
+
+/* Mobile dropdown menu */
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+  font-size: 14px;
+  padding: 16px;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.mobile-menu .nav-link {
+  padding: 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+.mobile-menu .nav-link:hover {
+  background-color: white;
+  color: #22c55e;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu .submit-btn {
+  margin-top: 8px;
+  padding: 12px 16px;
+  width: 100%;
+  text-align: center;
+  margin-left: 0;
+}
+
+.mobile-menu .auth-button-wrapper {
+  margin-top: 4px;
+  margin-left: 0;
+  width: 100%;
+}
+
+.mobile-menu .auth-button-wrapper .LoginForm,
+.mobile-menu .auth-button-wrapper .SignupForm {
+  padding: 12px 16px;
+}
+
+/* Hide mobile menu on desktop */
+@media (min-width: 768px) {
+  .mobile-menu {
+    display: none !important;
+  }
+
+  .hamburger-btn {
+    display: none;
+  }
+
+  .desktop-menu {
+    display: flex;
+  }
+}
+
+/* Show mobile elements on small screens */
+@media (max-width: 767px) {
+  .hamburger-btn {
+    display: block;
+  }
+
+  .desktop-menu {
+    display: none;
+  }
+
+  .navbar {
+    padding: 12px 16px;
+  }
+
+  .navbar-brand {
+    font-size: 20px;
+  }
+}
+
+/* Animation for mobile menu */
+.mobile-menu {
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Focus styles for accessibility */
+.nav-link:focus,
+.submit-btn:focus,
+.auth-button-wrapper:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #22c55e;
+}
+
+/* Active link styles */
+.nav-link.active {
+  color: #22c55e;
+  background-color: #f0fdf4;
+  font-weight: 600;
+}
+
+/* Responsive improvements */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 8px 12px;
+  }
+
+  .navbar-brand {
+    font-size: 18px;
+  }
+
+  .mobile-menu {
+    margin: 12px -12px -8px -12px;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+}
+
+/* Dropdown Styles */
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown-trigger {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+  color: #374151;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  font-family: inherit;
+}
+
+.dropdown-trigger:hover {
+  color: #22c55e;
+  background-color: #f8fafc;
+}
+
+.dropdown-arrow {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s ease;
+}
+
+.dropdown-container:hover .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding: 8px 0;
+  min-width: 180px;
+  z-index: 1001;
+  animation: dropdownFadeIn 0.2s ease-out;
+}
+
+.dropdown-link {
+  display: block;
+  padding: 8px 16px;
+  color: #374151;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+.dropdown-link:hover {
+  background-color: #f8fafc;
+  color: #22c55e;
+}
+
+/* Mobile Dropdown Styles */
+.mobile-dropdown {
+  width: 100%;
+}
+
+.mobile-dropdown-trigger {
+  width: 100%;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+  text-align: left;
+  color: #374151;
+  padding: 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.mobile-dropdown-trigger:hover {
+  background-color: white;
+  color: #22c55e;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-dropdown-menu {
+  padding-left: 16px;
+  margin-top: 4px;
+}
+
+.mobile-dropdown-menu .dropdown-link {
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-bottom: 2px;
+}
+
+.mobile-dropdown-menu .dropdown-link:hover {
+  background-color: white;
+  color: #22c55e;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation for dropdown */
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Focus styles for dropdown triggers */
+.dropdown-trigger:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #22c55e;
+}
+
+.mobile-dropdown-trigger:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #22c55e;
+}
+
+/* Login Form Styles - as separate page/component */
+.LoginForm {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e5e7eb;
+}
+
+/* When LoginForm class is used as link text in navbar */
+.navbar .LoginForm {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  color: inherit;
+  font-size: inherit;
+  font-weight: normal;
+}
+
+.LoginForm h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #1f2937;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.LoginForm .form-group {
+  margin-bottom: 1rem;
+}
+
+.LoginForm label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #374151;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.LoginForm input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.LoginForm input:focus {
+  outline: none;
+  border-color: #22c55e;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.LoginForm .submit-btn {
+  width: 100%;
+  margin-top: 1rem;
+  margin-left: 0;
+}
+
+/* Signup Form Styles - as separate page/component */
+.SignupForm {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e5e7eb;
+}
+
+/* When SignupForm class is used as link text in navbar */
+.navbar .SignupForm {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  color: inherit;
+  font-size: inherit;
+  font-weight: normal;
+}
+
+.SignupForm h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #1f2937;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.SignupForm .form-group {
+  margin-bottom: 1rem;
+}
+
+.SignupForm label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #374151;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.SignupForm input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.SignupForm input:focus {
+  outline: none;
+  border-color: #22c55e;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.SignupForm .submit-btn {
+  width: 100%;
+  margin-top: 1rem;
+  margin-left: 0;
+}
+
+/* Form validation styles */
+.LoginForm input:invalid,
+.SignupForm input:invalid {
+  border-color: #ef4444;
+}
+
+.LoginForm input:invalid:focus,
+.SignupForm input:invalid:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+/* Error message styles */
+.LoginForm .error-message,
+.SignupForm .error-message {
+  color: #ef4444;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+/* Success message styles */
+.LoginForm .success-message,
+.SignupForm .success-message {
+  color: #059669;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+/* Fix for buttons wrapping links */
+.navbar button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.navbar button .submit-btn,
+.navbar button .LoginForm,
+.navbar button .SignupForm {
+  display: block;
+}

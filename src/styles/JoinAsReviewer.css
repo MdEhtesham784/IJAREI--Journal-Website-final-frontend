@@ -1,0 +1,505 @@
+/* JoinAsReviewer.css */
+
+/* Container Styles */
+.reviewer-container {
+  min-height: 100vh;
+  background-color: #f9fafb;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+/* Header Styles */
+.reviewer-header {
+  background-color: #166534;
+  color: white;
+  padding: 4rem 1rem 3rem;
+  text-align: center;
+}
+
+.header-content {
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.header-title {
+  font-size: clamp(2rem, 5vw, 3.75rem);
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.reviewer-header-subtitle {
+  font-size: clamp(1.125rem, 3vw, 1.5rem);
+  color: rgba(220, 252, 231, 0.9);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Main Content */
+.reviewer-main {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Section Styles */
+.reviewer-section {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: clamp(1.5rem, 4vw, 1.875rem);
+  font-weight: bold;
+  color: #1a202c;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.section-text {
+  font-size: clamp(1rem, 2.5vw, 1.125rem);
+  color: #4a5568;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.highlight-text {
+  font-weight: 600;
+  color: #166534;
+}
+
+/* Alert Card */
+.alert-card {
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 0.5rem;
+  padding: clamp(1rem, 3vw, 1.5rem);
+  margin-bottom: 1.5rem;
+}
+
+.alert-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.alert-icon {
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+
+.alert-text {
+  color: #166534;
+  margin: 0;
+  font-size: clamp(0.875rem, 2.5vw, 1rem);
+}
+
+/* Policy Section */
+.policy-section {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: clamp(1rem, 3vw, 1.5rem);
+  background-color: #f9fafb;
+  margin-bottom: 1.5rem;
+}
+
+.policy-title {
+  font-size: clamp(1.125rem, 3vw, 1.25rem);
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.policy-icon {
+  flex-shrink: 0;
+}
+
+.policy-text {
+  font-size: clamp(0.875rem, 2.5vw, 1rem);
+  color: #4a5568;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+/* Bullet Lists */
+.bullet-list {
+  margin-bottom: 1rem;
+}
+
+.bullet-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.bullet {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #166534;
+  border-radius: 50%;
+  margin-top: 0.5rem;
+  flex-shrink: 0;
+}
+
+.bullet-text {
+  color: #4a5568;
+  margin: 0;
+  font-size: clamp(0.875rem, 2.5vw, 1rem);
+}
+
+/* Highlight Box */
+.highlight-box {
+  background-color: #fef3c7;
+  border: 1px solid #fbbf24;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.highlight-box-text {
+  color: #92400e;
+  margin: 0;
+  font-size: clamp(0.875rem, 2.5vw, 1rem);
+}
+
+/* Benefits Card */
+.benefits-card {
+  background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+  border: 2px solid #bbf7d0;
+  border-radius: 0.75rem;
+  padding: clamp(1.5rem, 4vw, 2rem);
+  margin-bottom: 1.5rem;
+}
+
+.benefits-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.benefits-title {
+  font-size: clamp(1.25rem, 3.5vw, 1.5rem);
+  font-weight: bold;
+  color: #166534;
+  margin: 0;
+}
+
+.benefits-subtitle {
+  font-size: clamp(0.875rem, 2.5vw, 1rem);
+  color: #16a34a;
+  margin: 0;
+}
+
+/* Grid Layouts */
+.responsive-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.benefits-grid {
+  margin-top: 1.5rem;
+}
+
+/* Benefits Cards */
+.benefits-card-item {
+  background-color: white;
+  border: 1px solid #bbf7d0;
+  border-radius: 0.5rem;
+  padding: clamp(1rem, 3vw, 1.5rem);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.benefits-card-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.benefits-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.benefits-item-title {
+  font-size: clamp(1rem, 2.8vw, 1.125rem);
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 0.5rem;
+}
+
+.benefits-description {
+  font-size: clamp(0.875rem, 2.5vw, 1rem);
+  color: #64748b;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Application Card */
+.application-card {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border: 2px solid #fbbf24;
+  border-radius: 0.5rem;
+  padding: clamp(1.5rem, 4vw, 2rem);
+}
+
+.application-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.application-icon {
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+
+.application-text p {
+  color: #92400e;
+  margin: 0;
+  font-size: clamp(0.875rem, 2.5vw, 1rem);
+  line-height: 1.6;
+}
+
+/* Recognition Card */
+.recognition-card {
+  background: linear-gradient(135deg, #ede9fe 0%, #f3f4f6 100%);
+  border: 2px solid #c4b5fd;
+  border-radius: 0.75rem;
+  padding: clamp(1.5rem, 4vw, 2rem);
+  margin-bottom: 1.5rem;
+}
+
+.recognition-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.recognition-title {
+  font-size: clamp(1.25rem, 3.5vw, 1.5rem);
+  font-weight: bold;
+  color: #166534;
+  margin: 0;
+}
+
+.recognition-subtitle {
+  font-size: clamp(0.875rem, 2.5vw, 1rem);
+  color: #7c3aed;
+  margin: 0;
+}
+
+/* Contact Section */
+.contact-section {
+  background-color: #f0fdf4;
+  border: 2px solid #bbf7d0;
+  border-radius: 0.5rem;
+  padding: clamp(1.5rem, 4vw, 2rem);
+  text-align: center;
+}
+
+.contact-title {
+  font-size: clamp(1.25rem, 3.5vw, 1.5rem);
+  font-weight: bold;
+  color: #1a202c;
+  margin-bottom: 1rem;
+}
+
+.contact-description {
+  font-size: clamp(0.875rem, 2.5vw, 1rem);
+  color: #4a5568;
+  line-height: 1.7;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: clamp(1rem, 3vw, 1.5rem);
+  background-color: white;
+  border-radius: 0.5rem;
+  border: 1px solid #bbf7d0;
+}
+
+.icon-circle {
+  width: clamp(2.5rem, 6vw, 3rem);
+  height: clamp(2.5rem, 6vw, 3rem);
+  border-radius: 50%;
+  background-color: #166534;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-label {
+  color: #64748b;
+  margin: 0 0 0.25rem 0;
+  font-size: clamp(0.875rem, 2.5vw, 1rem);
+}
+
+.contact-link {
+  color: #166534;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: clamp(0.875rem, 2.5vw, 1rem);
+  word-break: break-all;
+  transition: color 0.2s ease;
+}
+
+.contact-link:hover {
+  color: #14532d;
+}
+
+/* Final Note Card */
+.final-note-card {
+  background: linear-gradient(135deg, #dbeafe 0%, #e0f2fe 100%);
+  border: 2px solid #60a5fa;
+  border-radius: 0.5rem;
+  padding: clamp(1.5rem, 4vw, 2rem);
+}
+
+.final-note-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.final-note-icon {
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+
+.final-note-title {
+  font-size: clamp(1.125rem, 3vw, 1.25rem);
+  font-weight: bold;
+  color: #1a202c;
+  margin-bottom: 0.75rem;
+}
+
+.final-note-text p {
+  color: #1e40af;
+  margin: 0;
+  font-size: clamp(0.875rem, 2.5vw, 1rem);
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+
+/* Mobile First - Default styles above */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .reviewer-main {
+    padding: 2rem 1.5rem;
+  }
+  
+  .reviewer-section {
+    padding: 2rem;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .reviewer-header {
+    padding: 5rem 1.5rem 4rem;
+  }
+  
+  .responsive-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .contact-item {
+    flex-direction: row;
+    text-align: left;
+  }
+  
+  .application-content,
+  .final-note-content {
+    gap: 1.5rem;
+  }
+  
+  .benefits-header,
+  .recognition-header {
+    flex-wrap: nowrap;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .reviewer-header {
+    padding: 6rem 2rem 5rem;
+  }
+  
+  .reviewer-main {
+    padding: 3rem 2rem;
+  }
+  
+  .benefits-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .reviewer-header {
+    padding: 8rem 2rem 6rem;
+  }
+  
+  .reviewer-section {
+    padding: 2.5rem;
+  }
+  
+  .benefits-card,
+  .recognition-card {
+    padding: 2.5rem;
+  }
+}
+
+/* Smooth transitions for better UX */
+* {
+  transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* Focus styles for accessibility */
+.contact-link:focus {
+  outline: 2px solid #166534;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Print styles */
+@media print {
+  .reviewer-container {
+    background-color: white;
+  }
+  
+  .reviewer-header {
+    background-color: #166534;
+    color: white;
+  }
+  
+  .contact-link {
+    color: #166534 !important;
+  }
+}

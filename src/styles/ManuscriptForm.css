@@ -1,0 +1,420 @@
+/* ManuscriptForm.css */
+
+.manuscript-container {
+    min-height: 100vh;
+    background-color: #f9fafb;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+}
+
+.manuscript-header {
+    margin-top: 50px;
+    background-color: #166534;
+    color: white;
+    padding: 4rem 1rem 3rem;
+    text-align: center;
+}
+
+.manuscript-header-content {
+    max-width: 64rem;
+    margin: 0 auto;
+}
+
+.manuscript-header-title {
+    font-size: clamp(1.875rem, 5vw, 3.75rem);
+    font-weight: bold;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+
+.manuscript-header-subtitle {
+    font-size: clamp(1.125rem, 3vw, 1.5rem);
+    color: #bbf7d0;
+    line-height: 1.5;
+}
+
+.manuscript-main {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.manuscript-section {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.manuscript-section-title {
+    font-size: clamp(1.5rem, 4vw, 1.875rem);
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.manuscript-text {
+    font-size: clamp(1rem, 2.5vw, 1.125rem);
+    color: #374151;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.manuscript-form-section {
+    background-color: #f0fdf4;
+    border: 2px solid #bbf7d0;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.manuscript-form-title {
+    font-size: clamp(1.5rem, 4vw, 1.875rem);
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.manuscript-guide-button {
+    background-color: #16a34a;
+    color: white;
+    padding: clamp(0.5rem, 2vw, 0.75rem) clamp(1rem, 3vw, 1.5rem);
+    border: none;
+    border-radius: 0.5rem;
+    font-size: clamp(0.875rem, 2vw, 1rem);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0 auto 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.manuscript-guide-button:hover {
+    background-color: #15803d;
+}
+
+.manuscript-guide-box {
+    background-color: #cffede;
+    border: 2px solid #86efac;
+    border-radius: 0.5rem;
+    padding: clamp(1rem, 3vw, 1.5rem);
+    margin-bottom: 2rem;
+}
+
+.manuscript-guide-box.hidden {
+    display: none;
+}
+
+.manuscript-form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.manuscript-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.manuscript-label {
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
+    font-weight: 600;
+    color: #1f2937;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.manuscript-input {
+    padding: clamp(0.625rem, 2vw, 0.75rem) clamp(0.75rem, 2.5vw, 1rem);
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
+    background-color: white;
+    outline: none;
+    transition: all 0.2s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.manuscript-input:focus {
+    border-color: #166534;
+    box-shadow: 0 0 0 3px rgba(108, 62, 232, 0.1);
+}
+
+.manuscript-textarea {
+    padding: clamp(0.625rem, 2vw, 0.75rem) clamp(0.75rem, 2.5vw, 1rem);
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
+    background-color: white;
+    outline: none;
+    resize: vertical;
+    min-height: clamp(100px, 15vw, 140px);
+    font-family: inherit;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+.manuscript-textarea:focus {
+    border-color: #166534;
+    box-shadow: 0 0 0 3px rgba(108, 62, 232, 0.1);
+}
+
+.manuscript-file-input {
+    padding: clamp(0.625rem, 2vw, 0.75rem) clamp(0.75rem, 2.5vw, 1rem);
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
+    background-color: white;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+.manuscript-file-status {
+    color: #6b7280;
+    font-size: clamp(0.75rem, 2vw, 0.875rem);
+    font-style: italic;
+    margin-top: 0.25rem;
+}
+
+.manuscript-submit-button {
+    background-color: #166534;
+    color: white;
+    padding: clamp(0.75rem, 2.5vw, 1rem) clamp(1.5rem, 4vw, 2rem);
+    border: none;
+    border-radius: 0.5rem;
+    font-size: clamp(1rem, 2.5vw, 1.125rem);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+    max-width: 400px;
+    margin: 2rem auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+}
+
+.manuscript-submit-button:hover:not(:disabled) {
+    background-color: #166534;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.manuscript-submit-button:disabled {
+    background-color: #9ca3af;
+    cursor: not-allowed;
+}
+
+.manuscript-requirement-item {
+    display: flex;
+    align-items: flex-start;
+    gap: clamp(0.75rem, 2vw, 1rem);
+    padding: clamp(0.75rem, 2vw, 1rem);
+    background-color: #f0fdf4;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.manuscript-requirement-title {
+    font-weight: 600;
+    color: #1f2937;
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
+    margin-bottom: 0.25rem;
+}
+
+.manuscript-requirement-desc {
+    color: #6b7280;
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
+    line-height: 1.5;
+}
+
+.manuscript-highlight-box {
+    background-color: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 0.5rem;
+    padding: clamp(1rem, 3vw, 1.5rem);
+    margin-bottom: 1.5rem;
+}
+
+.manuscript-bullet-point {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.manuscript-bullet {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #166534;
+    border-radius: 50%;
+    margin-top: 0.5rem;
+    flex-shrink: 0;
+}
+
+.manuscript-alert-card {
+    background-color: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 0.5rem;
+    padding: clamp(1rem, 3vw, 1.5rem);
+}
+
+.manuscript-alert-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.manuscript-tips-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(1rem, 3vw, 1.5rem);
+}
+
+.manuscript-tip-card {
+    display: flex;
+    align-items: flex-start;
+    gap: clamp(0.75rem, 2vw, 1rem);
+    padding: clamp(0.75rem, 2vw, 1rem);
+    background-color: #dcfce7;
+    border-radius: 0.5rem;
+    border: 1px solid #16a34a;
+}
+
+.manuscript-tip-title {
+    font-weight: 600;
+    color: #1f2937;
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
+    margin-bottom: 0.5rem;
+}
+
+.manuscript-tip-desc {
+    color: #6b7280;
+    font-size: clamp(0.75rem, 2vw, 0.875rem);
+    line-height: 1.5;
+}
+
+.manuscript-contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: clamp(1rem, 3vw, 1.5rem);
+    background-color: #f9fafb;
+    border-radius: 0.5rem;
+    border: 1px solid #e5e7eb;
+}
+
+.manuscript-icon-circle {
+    width: clamp(2.5rem, 6vw, 3rem);
+    height: clamp(2.5rem, 6vw, 3rem);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #166534;
+    flex-shrink: 0;
+}
+
+.manuscript-contact-title {
+    font-weight: 600;
+    color: #1f2937;
+    font-size: clamp(1rem, 2.5vw, 1.125rem);
+    margin-bottom: 0.25rem;
+}
+
+.manuscript-link {
+    color: #166534;
+    text-decoration: none;
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
+    word-break: break-all;
+    transition: color 0.2s ease;
+}
+
+.manuscript-link:hover {
+    color: #1e40af;
+}
+
+.manuscript-status-message {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
+    font-weight: 600;
+    text-align: center;
+}
+
+.manuscript-success-message {
+    background-color: #dcfce7;
+    color: #166534;
+    border: 1px solid #16a34a;
+}
+
+.manuscript-error-message {
+    background-color: #fee2e2;
+    color: #dc2626;
+    border: 1px solid #ef4444;
+}
+
+.manuscript-spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ffffff;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.manuscript-guide-title {
+    font-size: clamp(1.125rem, 3vw, 1.25rem);
+    margin-bottom: 1rem;
+    color: #0c4a6e;
+    font-weight: 600;
+}
+
+/* Media Queries for responsive design */
+@media (min-width: 640px) {
+    .manuscript-contact-item {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .manuscript-tips-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .manuscript-form-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .manuscript-section {
+        padding: 2rem;
+    }
+}
+
+/* Animation keyframes */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
